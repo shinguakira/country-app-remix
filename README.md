@@ -2,6 +2,8 @@
 
 A modern, responsive web application built with Remix that allows users to explore information about countries around the world.
 
+![Country App Remix Screenshot](./public/countryAppRemix.png)
+
 ![Remix](https://img.shields.io/badge/Remix-v7.5.0-blue?style=for-the-badge&logo=remix&logoColor=white)
 ![React](https://img.shields.io/badge/React-v19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
