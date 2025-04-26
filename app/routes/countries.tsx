@@ -1,24 +1,22 @@
-import { Link } from "react-router";
-import type { Route } from "./+types/countries";
-import { useState } from "react";
-import type { Country } from "~/types/restCountryApi";
+import { Link } from 'react-router';
+import type { Route } from './+types/countries';
+import { useState } from 'react';
+import type { Country } from '~/types/restCountryApi';
 
 export async function clientLoader() {
-  const res = await fetch("https://restcountries.com/v3.1/all");
+  const res = await fetch('https://restcountries.com/v3.1/all');
   const data: Country[] = await res.json();
   return data;
 }
 
 export default function Countries({ loaderData }: Route.ComponentProps) {
-  const [search, setSearch] = useState<string>("");
-  const [region, setRegion] = useState<string>("");
+  const [search, setSearch] = useState<string>('');
+  const [region, setRegion] = useState<string>('');
 
   const filteredCountries = loaderData.filter((country: Country) => {
-    const matchesRegion =
-      !region || country.region.toLowerCase() === region.toLowerCase();
+    const matchesRegion = !region || country.region.toLowerCase() === region.toLowerCase();
     const matchesSearch =
-      !search ||
-      country.name.common.toLowerCase().includes(search.toLowerCase());
+      !search || country.name.common.toLowerCase().includes(search.toLowerCase());
     return matchesSearch && matchesRegion;
   });
 
@@ -30,12 +28,12 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
           type="text"
           placeholder="Search by name..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={e => setSearch(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:border-indigo-500"
         />
         <select
           value={region}
-          onChange={(e) => setRegion(e.target.value)}
+          onChange={e => setRegion(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:border-indigo-500"
         >
           <option value="">All Regions</option>

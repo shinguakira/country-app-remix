@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from 'react-router';
 
 export default function Navbar() {
   return (
@@ -11,23 +11,13 @@ export default function Navbar() {
             </span>
           </NavLink>
           <nav className="flex flex-wrap items-center ml-0 md:ml-8 md:border-l md:pl-8">
-            <NavLink
-              to="/"
-              end
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
-            >
+            <NavLink to="/" end className="mr-5 font-medium text-gray-600 hover:text-gray-900">
               Home
             </NavLink>
-            <NavLink
-              to="/countries"
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
-            >
+            <NavLink to="/countries" className="mr-5 font-medium text-gray-600 hover:text-gray-900">
               Countries
             </NavLink>
-            <NavLink
-              to="/about"
-              className="mr-5 font-medium text-gray-600 hover:text-gray-900"
-            >
+            <NavLink to="/about" className="mr-5 font-medium text-gray-600 hover:text-gray-900">
               About
             </NavLink>
           </nav>

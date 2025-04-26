@@ -1,4 +1,4 @@
-import { Globe, MapPin, Users } from "lucide-react";
+import { Globe, MapPin, Users } from 'lucide-react';
 
 interface CountryInfoProps {
   name: string;
@@ -23,14 +23,10 @@ const CountryInfo = ({
     <div className="absolute inset-x-0 top-[64px] bottom-0 bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-6 lg:p-8 flex items-center justify-center overflow-auto">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="relative h-48 sm:h-64 overflow-hidden">
-          <img
-            src={flagUrl}
-            alt={`Flag of ${name}`}
-            className="w-full h-full object-cover"
-          />
+          <img src={flagUrl} alt={`Flag of ${name}`} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/20" />
         </div>
-        
+
         <div className="p-6 sm:p-8">
           <div className="space-y-6">
             {/* Country Names Section */}
