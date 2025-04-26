@@ -1,10 +1,11 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/countries";
 import { useState } from "react";
+import type { Country } from "~/types/restCountryApi";
 
 export async function clientLoader() {
   const res = await fetch("https://restcountries.com/v3.1/all");
-  const data = await res.json();
+  const data: Country[] = await res.json();
   return data;
 }
 
@@ -12,7 +13,7 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
   const [search, setSearch] = useState<string>("");
   const [region, setRegion] = useState<string>("");
 
-  const filteredCountries = loaderData.filter((country: any) => {
+  const filteredCountries = loaderData.filter((country: Country) => {
     const matchesRegion =
       !region || country.region.toLowerCase() === region.toLowerCase();
     const matchesSearch =
@@ -50,7 +51,7 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
         <div> No countries match your filters. </div>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredCountries.map((country: any) => (
+          {filteredCountries.map((country: Country) => (
             <li
               key={country.cca3}
               className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition"
