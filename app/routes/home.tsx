@@ -1,10 +1,10 @@
-import { Link } from "react-router";
-import type { Route } from "./+types/home";
+import { Link } from 'react-router';
+import type { Route } from './+types/home';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "RESTExplorer" },
-    { name: "Check out country data!", content: "Welcome to RESTExplorer." },
+    { title: 'RESTExplorer' },
+    { name: 'Check out country data!', content: 'Welcome to RESTExplorer.' },
   ];
 }
 
@@ -17,13 +17,10 @@ export default function Home() {
             <div className="space-y-6 sm:max-w-md lg:max-w-lg">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
                 <span className="block xl:inline">Explore Countries with</span>
-                <span className="block text-indigo-600 xl:inline">
-                  Real-Time Data
-                </span>
+                <span className="block text-indigo-600 xl:inline">Real-Time Data</span>
               </h1>
               <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl">
-                Discover details about every country around the world – from
-                capitals to regions!
+                Discover details about every country around the world – from capitals to regions!
               </p>
               <div className="flex flex-col sm:flex-row sm:space-x-4">
                 <Link
