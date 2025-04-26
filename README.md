@@ -1,20 +1,30 @@
-# Welcome to React Router!
+# 🌎 Countries Explorer App
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern, responsive web application built with Remix that allows users to explore information about countries around the world.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+![Remix](https://img.shields.io/badge/Remix-v7.5.0-blue?style=for-the-badge&logo=remix&logoColor=white)
+![React](https://img.shields.io/badge/React-v19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-v5.4.11-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## Features
+## ✨ Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🔍 Search countries by name
+- 🗺️ Filter countries by region
+- 📊 View detailed information about each country
+- 🏳️ See country flags and essential data
+- 🌓 Light/dark mode support
+- 📱 Fully responsive design
+- 🚀 Server-side rendering for better performance
+- 🔄 Type-safe API integration
 
-## Getting Started
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
 
 ### Installation
 
@@ -34,7 +44,7 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+## 🏗️ Building for Production
 
 Create a production build:
 
@@ -42,46 +52,49 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+## 🧪 Running Tests
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run typecheck
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## 📦 Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+├── app/
+│   ├── components/       # Reusable UI components
+│   ├── routes/           # Application routes
+│   ├── types/            # TypeScript type definitions
+│   ├── app.css           # Global styles
+│   └── root.tsx          # Root component
+├── public/               # Static assets
+├── tailwind.config.js    # Tailwind CSS configuration
+├── vite.config.ts        # Vite configuration
+└── tsconfig.json         # TypeScript configuration
 ```
 
-## Styling
+## 🧩 API Integration
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project uses the [REST Countries API](https://restcountries.com/) to fetch country data. The API provides information about countries including:
+
+- Name, capital, and region
+- Population and area
+- Languages and currencies
+- Flag images and border countries
+
+## 💻 Tech Stack
+
+- **Framework**: [Remix](https://remix.run/) - A full stack web framework
+- **UI Library**: [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- **Icons**: [Lucide React](https://lucide.dev/) - Beautiful & consistent icons
+- **Build Tool**: [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- **Language**: [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using Remix and React Router.
